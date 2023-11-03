@@ -12,6 +12,8 @@ passport.use(
       clientSecret: keys.googleClientSecret,
       // route user is sent to after they grant permission in google server
       callbackURL: "/auth/google/callback",
+      // google you can just trust the proxy
+      proxy: true,
     },
     //second argument is callback arrow function
     (accessToken, refreshToken, profile, done) => {
