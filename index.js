@@ -37,5 +37,6 @@ require("./routes/authRoutes")(app);
 app.use(passport.initialize());
 app.use(passport.session());
 
+// whenever render runs app, it wil inject environment variables - pass runtime configuration
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
